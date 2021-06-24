@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block imports %}
+<link rel="stylesheet" href="{% static 'css/post/post_list.css' %}">
+{% endblock imports %}
+
+{% block content %}
+<h1>Lista postów</h1>
+<section class="posts">
+    {% for post in posts %}
+    <a href="{{post.get_absolute_url}}">
+        <article class="post">
+            <header class="title">
+                {{post.title}}
+            </header>
+            <p class="snippet">
+                {{post.text}}
+            </p>
+        </article>
+    </a>
+    {% endfor %}
+</section>
+{% endblock content %}
+
+
+{% block menu %}
+
+{% endblock menu %}

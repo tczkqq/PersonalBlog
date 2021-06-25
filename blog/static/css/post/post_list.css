@@ -1,5 +1,7 @@
 .posts {
     display: flex;
     flex-direction: column;
-    background-color: aqua;
+}
+.post {
+    margin-bottom: 30px;
 }

@@ -1,21 +1,17 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 
+{% block site-title %}
+<h1>{{post.title}}</h1>
+{% endblock site-title %}
 
 {% block content %}
-
-
+<p> {{post.text}}</p>
 {{post.publish|date:"N d, Y" }}
 {% for tag in post.tags.all %}
-    #{{tag}} 
+    #{{tag}}
 {% endfor %}
-
-<h1>{{post.title}}</h1>
-<p> {{post.text}}</p>
-
-
 {% endblock content %}
-
 
 {% block menu %}
 {% endblock menu %}

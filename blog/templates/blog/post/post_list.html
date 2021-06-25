@@ -5,14 +5,17 @@
 <link rel="stylesheet" href="{% static 'css/post/post_list.css' %}">
 {% endblock imports %}
 
+{% block site-title %}
+    <h1>Lista postów</h1>
+{% endblock site-title %}
+
 {% block content %}
-<h1>Lista postów</h1>
 <section class="posts">
     {% for post in posts %}
     <a href="{{post.get_absolute_url}}">
         <article class="post">
             <header class="title">
-                {{post.title}}
+                <h3>{{post.title}}</h3>
             </header>
             <p class="snippet">
                 {{post.text}}

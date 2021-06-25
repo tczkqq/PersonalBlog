@@ -11,18 +11,33 @@
     {% endblock imports %}
 </head>
 <body>
-    <main>
-        {% block content %}
+    <div class="wrapper-column">
+        <header class="title">
+            {% block site-title %}
+            {% endblock site-title %}
+        </header>
+        <div class="wrapper">
+        <aside class="menu">
+            <ul>
+                <li><a href="{% url 'blog:post_list' %}">🏠Home</a></li>
+                {% if user.is_authenticated %}
+                    <li>⚙ Admin Panel</li>
+                {% endif %}
+            </ul>
+            {% block menu %}
+            
+            {% endblock menu %}
+        </aside>
+        <main>
+            {% block content %}
 
-        {% endblock content %}
-    </main>
-    <aside class="menu">
-        {% block menu %}
+            {% endblock content %}
+        </main>
+        </div>
         
-        {% endblock menu %}
-    </aside>
-    <footer>
-        Created by <a href="https://github.com/Tomeczekqq">Tomeczekqq</a>
-    </footer>
+        <footer>
+            Created by <a href="https://github.com/Tomeczekqq">Tomeczekqq</a>
+        </footer>
+    </div>
 </body>
 </html>

@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.shortcuts import reverse 
 from django.db.models import Count
+from ckeditor.fields import RichTextField
 
 class PublishedManager(models.Manager):
     def get_queryset(self):
@@ -22,7 +23,7 @@ class Post(models.Model):
     )
     title = models.CharField(max_length=150)
     slug = models.SlugField(max_length=150)
-    text = models.TextField()
+    text = RichTextField()
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

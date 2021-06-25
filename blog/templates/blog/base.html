@@ -21,7 +21,7 @@
             <ul>
                 <li><a href="{% url 'blog:post_list' %}">🏠Home</a></li>
                 {% if user.is_authenticated %}
-                    <li>⚙ Admin Panel</li>
+                    <li><a href="{% url 'admin:index' %}">⚙ Admin Panel</a></a></li>
                 {% endif %}
             </ul>
             {% block menu %}

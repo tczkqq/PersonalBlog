@@ -1,5 +1,9 @@
 # PersonalBlog
-Personal blog website made in django.
+Minimalistic blog website made in django. 
+
+## Features
+- Adding posts with ckeditor via Admin panel
+- Tags
 
 ## Requirments
 - django
@@ -7,6 +11,8 @@ Personal blog website made in django.
 - python3
 
 ## To-Do
+- ~~Post snippet~~
 - Responsive
 - Tag browser
 - API
+- Comments

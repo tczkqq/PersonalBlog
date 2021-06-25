@@ -1,5 +1,6 @@
 {% extends 'blog/base.html' %}
 {% load static %}
+{% load blog_tags %}
 
 {% block imports %}
 <link rel="stylesheet" href="{% static 'css/post/post_list.css' %}">
@@ -18,7 +19,7 @@
                 <h3>{{post.title}}</h3>
             </header>
             <p class="snippet">
-                {{post.text}}
+                {{post.text|to_snippet|safe }}
             </p>
         </article>
     </a>

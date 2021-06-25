@@ -2,5 +2,11 @@
 Personal blog website made in django.
 
 ## Requirments
-- django2 >=
+- django
+- django-ckeditor
 - python3
+
+## To-Do
+- Responsive
+- Tag browser
+- API

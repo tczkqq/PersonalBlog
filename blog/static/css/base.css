@@ -1,3 +1,27 @@
+body {
+  margin: 0px;
+  color: black;
+}
+body a {
+  text-decoration: none;
+}
+body a:hover {
+  color: orange;
+}
+body a:link {
+  color: black;
+}
+body a:visited {
+  color: black;
+}
+body a:visited:hover {
+  color: orange;
+}
+
+#toTop {
+  font-size: 30px;
+}
+
 .wrapper {
   width: 960px;
   height: 100vh;
@@ -8,11 +32,14 @@
   grid-template-columns: 20% 1fr 15%;
   grid-gap: 10px;
 }
-.wrapper .title {
+.wrapper #title {
   grid-area: title;
 }
 .wrapper .menu {
   grid-area: menu;
+}
+.wrapper .menu li {
+  list-style-type: none;
 }
 .wrapper .content {
   grid-area: content;

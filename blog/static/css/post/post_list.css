@@ -1,13 +1,13 @@
 .posts .post {
   margin-bottom: 50px;
 }
+
 .posts .post .title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .posts .post .title span {
   margin-top: 1.2em;
 }
-
-/*# sourceMappingURL=post_list.css.map */

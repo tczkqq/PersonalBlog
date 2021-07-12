@@ -1,16 +1,21 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 
+{% block imports %}
+    <link rel="stylesheet" href="{% static 'css/post/post_detail.css' %}">
+{% endblock imports %}
 {% block site-title %}
 <h1>{{post.title}}</h1>
 {% endblock site-title %}
 
 {% block content %}
-<p> {{post.text|safe}}</p>
-{{post.publish|date:"N d, Y" }}
-{% for tag in post.tags.all %}
-    #{{tag}}
-{% endfor %}
+<article class='main'>
+    <p> {{post.text|safe}}</p>
+    {{post.publish|date:"N d, Y" }}
+    {% for tag in post.tags.all %}
+        #{{tag}}
+    {% endfor %}
+</article>
 {% endblock content %}
 
 {% block menu %}

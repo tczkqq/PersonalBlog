@@ -11,20 +11,20 @@
 {% endblock site-title %}
 
 {% block content %}
-<section class="posts">
-    {% for post in posts %}
-    <a href="{{post.get_absolute_url}}">
-        <article class="post">
-            <header class="title">
-                <h3>{{post.title}}</h3>
-            </header>
-            <p class="snippet">
-                {{post.text|to_snippet|safe }}
-            </p>
-        </article>
-    </a>
-    {% endfor %}
-</section>
+    <section class="posts">
+        {% for post in posts %}
+        <a href="{{post.get_absolute_url}}">
+            <article class="post">
+                <header class="title">
+                    <h3>{{post.title}}</h3>
+                </header>
+                <p class="snippet">
+                    {{post.text|to_snippet|safe }}
+                </p>
+            </article>
+        </a>
+        {% endfor %}
+    </section>
 {% endblock content %}
 
 

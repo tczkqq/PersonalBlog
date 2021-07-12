@@ -6,17 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.min.css' %}">
     {% block imports %}
     {% endblock imports %}
 </head>
 <body>
-    <div class="wrapper-column">
+    <div class="wrapper">
         <header class="title">
             {% block site-title %}
             {% endblock site-title %}
         </header>
-        <div class="wrapper">
         <aside class="menu">
             <ul>
                 <li><a href="{% url 'blog:post_list' %}">🏠Home</a></li>
@@ -28,12 +27,11 @@
             
             {% endblock menu %}
         </aside>
-        <main>
-            {% block content %}
+        <main class="content">
+        {% block content %}
 
-            {% endblock content %}
+        {% endblock content %}
         </main>
-        </div>
         
         <footer>
             Created by <a href="https://github.com/Tomeczekqq">Tomeczekqq</a>

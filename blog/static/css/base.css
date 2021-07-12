@@ -1,53 +1,25 @@
-.title h1 {
-    padding-left: 130px;
-}
-.menu {
-    color: inherit;
-    margin-top: 1em;
-}
-.menu ul {
-    padding: 0 5px 0 5px;
-    margin: 0;
-}
-.menu li {
-    list-style-type: none;
-}
-a {
-  outline: none;
-  text-decoration: none;
-}
-
-a:link {
-  color: black;
-}
-
-a:visited {
-  color:  black;
-}
-
-a:focus {
-  
-}
-
-a:hover {
-  
-}
-
-a:active {
-  color:  black;
-}
 .wrapper {
-    display: flex;
-    flex-wrap: nowrap;
+  width: 960px;
+  height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: ". title title" "menu content content" "footer footer footer";
+  grid-template-rows: 60px 1fr 60px;
+  grid-template-columns: 20% 1fr 15%;
+  grid-gap: 10px;
 }
-.wrapper-column {
-    width: 960px;
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+.wrapper .title {
+  grid-area: title;
 }
-footer {
-    text-align: center;
-    margin-top: 3em;
+.wrapper .menu {
+  grid-area: menu;
 }
+.wrapper .content {
+  grid-area: content;
+}
+.wrapper footer {
+  grid-area: footer;
+  text-align: center;
+}
+
+/*# sourceMappingURL=base.css.map */

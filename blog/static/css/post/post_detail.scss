@@ -1,0 +1,24 @@
+
+.wrapper {
+    #title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .info {
+            margin-top: 1.2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .tags {
+                text-align: end;
+            }
+        }
+    }
+    .post {
+        text-align: justify;
+
+        img {
+            max-width: 100vh;
+        }
+    }
+}

@@ -8,6 +8,7 @@ $fontMain: "Times New Roman";
 body {
     margin: 0px;
     color: $MainColor;
+    font-family: Arial, Helvetica, sans-serif;
     a {
         text-decoration: none;
         &:hover {

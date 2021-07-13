@@ -2,12 +2,12 @@
   margin-bottom: 50px;
 }
 
-.posts .post .title {
+.posts .post #title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.posts .post .title span {
+.posts .post #title span {
   margin-top: 1.2em;
 }

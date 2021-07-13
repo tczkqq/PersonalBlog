@@ -16,3 +16,4 @@ Minimalistic blog website made in django.
 - Tag browser
 - API
 - Comments
+- Rss
